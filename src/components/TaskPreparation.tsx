@@ -83,13 +83,20 @@ export function TaskPreparation({ language }: { language: Language }) {
   const t = taskContent[language];
 
   return (
-    <div id="task-preparation" className="py-16">
-      <h2 className="text-3xl font-bold text-center">{t.title}</h2>
-      <p className="mt-4 text-center">{t.description}</p>
-      <div className="flex justify-center gap-10 mt-8">
+    <div
+      id="task-preparation"
+      className="py-8 px-4 sm:px-8 md:py-16 bg-gray-50"
+    >
+      <h2 className="text-2xl sm:text-3xl font-bold text-center">
+        {t.title}
+      </h2>
+      <p className="mt-4 text-center text-sm sm:text-base">{t.description}</p>
+      <div className="flex flex-col md:flex-row justify-center gap-10 mt-8">
         <div className="text-center mx-4">
-          <h3 className="font-semibold">{t.qrInstructions[0]}</h3>
-          <ul className="mt-2">
+          <h3 className="font-semibold text-base sm:text-lg">
+            {t.qrInstructions[0]}
+          </h3>
+          <ul className="mt-2 text-sm sm:text-base">
             {t.features.map((feature, index) => (
               <li key={index} className="flex items-center gap-2">
                 <span>🔸</span>
@@ -98,14 +105,16 @@ export function TaskPreparation({ language }: { language: Language }) {
             ))}
           </ul>
           <img
-            className="w-[100px] h-[100px] mt-4"
+            className="w-20 h-20 sm:w-24 sm:h-24 mt-4 mx-auto"
             src="https://shujiajia.com/platform/home/static/img/down_wechat.d9156635.png"
             alt="QR Code 1"
           />
         </div>
         <div className="text-center mx-4">
-          <h3 className="font-semibold">{t.qrInstructions[1]}</h3>
-          <ul className="mt-2">
+          <h3 className="font-semibold text-base sm:text-lg">
+            {t.qrInstructions[1]}
+          </h3>
+          <ul className="mt-2 text-sm sm:text-base">
             <li className="flex items-center gap-2">
               <span>📱</span>
               {t.iosDownload}
@@ -115,20 +124,21 @@ export function TaskPreparation({ language }: { language: Language }) {
               {t.androidDownload}
             </li>
           </ul>
-          <div className="flex gap-3 items-center">
+          <div className="flex justify-center gap-3 items-center">
             <img
-              className="w-[100px] h-[100px] mt-4"
+              className="w-20 h-20 sm:w-24 sm:h-24 mt-4"
               src="https://shujiajia.com/platform/home/static/img/ios.d8ab9e1a.png"
               alt="QR Code 2"
             />
             <img
-              className="w-[100px] h-[100px] mt-4"
+              className="w-20 h-20 sm:w-24 sm:h-24 mt-4"
               src="https://shujiajia.com/platform/home/static/img/android.d183e291.png"
               alt="QR Code 2"
             />
           </div>
         </div>
         <img
+          className="w-20 h-24 sm:w-[300px] sm:h-[400px] mx-auto md:mx-0"
           src="https://shujiajia.com/platform/home/static/img/down_icon.10aaebe0.png"
           alt=""
         />
